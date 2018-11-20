@@ -17,7 +17,7 @@
 
 		<ul class="nav nav-tabs">
 			<li class="nav-item" *ngFor="let route of routes">
-				<a class="nav-link" [class.active]="isActiveRoute(route)" [routerLink]="route.path | localeParam">{{ route  | routeTitle }}</a>
+				<a class="nav-link" [class.active]="isActiveRoute(route)" [routerLink]="route.path">{{ route  | routeTitle }}</a>
 			</li>
 		</ul>
 

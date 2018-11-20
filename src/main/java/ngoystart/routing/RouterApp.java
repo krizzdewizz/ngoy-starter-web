@@ -9,9 +9,9 @@ import ngoy.router.Route;
 import ngoy.router.Router;
 
 @Component(selector = "", templateUrl = "app.component.html")
-@NgModule(declarations = { LocaleParamPipe.class, RouteTitlePipe.class })
+@NgModule(declarations = { RouteTitlePipe.class })
 public class RouterApp {
-	public final String appName = "Router";
+	public final String appName = "ngoy-starter-web";
 
 	@Inject
 	public Router router;
