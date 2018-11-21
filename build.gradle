@@ -15,7 +15,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'ngoy'
-version = '0.0.1-SNAPSHOT'
+version = '0.8.0'
 sourceCompatibility = 1.8
 
 repositories {
@@ -25,5 +25,14 @@ repositories {
 
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-web')
-	implementation('com.github.krizzdewizz:ngoy:delta2')
+	implementation('com.github.krizzdewizz:ngoy:alpha')
+}
+
+// include component html/css files that reside next to the class
+sourceSets {
+  main {
+    resources {
+      srcDir 'src/main/java'
+    }
+  }
 }
