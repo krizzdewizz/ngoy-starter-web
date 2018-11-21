@@ -6,6 +6,8 @@ Clone this repo to get started using ngoy
 
 ```
 git clone https://github.com/krizzdewizz/ngoy-starter-web
+
+cd ngoy-starter-web
 ```
 
 Build the artifact
