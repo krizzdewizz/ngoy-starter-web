@@ -12,16 +12,11 @@ git clone https://github.com/krizzdewizz/ngoy-starter-web
 cd ngoy-starter-web
 ```
 
-Build the artifact
-
-```
-gradle build
-```
 
 Run the web server
 
 ```
-java -jar build/libs/ngoy-starter-web-0.8.0.jar
+gradle run
 ```
 
 and open [http://localhost:8080](http://localhost:8080) in the browser.
