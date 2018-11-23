@@ -16,7 +16,7 @@ public class Main implements InitializingBean {
 	// must be disabled in production!
 	private static final boolean DEV = true;
 
-	private Ngoy<App> ngoy;
+	private Ngoy<AppComponent> ngoy;
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
@@ -24,7 +24,7 @@ public class Main implements InitializingBean {
 	}
 
 	private void createApp() {
-		ngoy = Ngoy.app(App.class)
+		ngoy = Ngoy.app(AppComponent.class)
 				.translateBundle("messages")
 				.build();
 	}
