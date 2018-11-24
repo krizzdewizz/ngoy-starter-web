@@ -39,3 +39,15 @@ sourceSets {
     }
   }
 }
+
+// extract ngoy jar to use it's cli
+configurations { ngoy }
+dependencies { ngoy 'com.github.krizzdewizz:ngoy:alpha' }
+task extractNgoy(type: Sync) {
+    dependsOn configurations.ngoy
+
+    from {
+        configurations.ngoy.collect { zipTree(it) }
+    }
+    into "$buildDir/ngoy/"
+}
