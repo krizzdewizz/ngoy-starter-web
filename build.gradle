@@ -28,7 +28,7 @@ repositories {
 
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-web')
-	implementation('com.github.krizzdewizz:ngoy:alpha')
+	implementation('com.github.krizzdewizz:ngoy:beta0')
 }
 
 // include component html/css files that reside next to the class
@@ -42,12 +42,8 @@ sourceSets {
 
 // extract ngoy jar to use it's cli
 configurations { ngoy }
-dependencies { ngoy 'com.github.krizzdewizz:ngoy:alpha' }
-task extractNgoy(type: Sync) {
-    dependsOn configurations.ngoy
-
-    from {
-        configurations.ngoy.collect { zipTree(it) }
-    }
-    into "$buildDir/ngoy/"
+dependencies { ngoy 'com.github.krizzdewizz:ngoy:beta0' }
+task extractNgoy(type: Copy) {
+    into "$buildDir/ngoy"
+    from configurations.ngoy
 }
