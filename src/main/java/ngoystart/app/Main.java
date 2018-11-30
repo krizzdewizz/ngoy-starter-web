@@ -13,9 +13,6 @@ import ngoy.Ngoy;
 @RequestMapping("/*")
 public class Main implements InitializingBean {
 
-	// must be disabled in production!
-	private static final boolean DEV = true;
-
 	private Ngoy<AppComponent> ngoy;
 
 	@Override
@@ -31,9 +28,8 @@ public class Main implements InitializingBean {
 
 	@GetMapping()
 	public void home(HttpServletResponse response) throws Exception {
-		if (DEV) {
-			createApp();
-		}
+		// re-recreate while developing to have changes picked-up
+//		createApp();
 		ngoy.render(response.getOutputStream());
 	}
 }
