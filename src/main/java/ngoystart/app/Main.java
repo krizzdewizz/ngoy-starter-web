@@ -15,7 +15,7 @@ public class Main implements InitializingBean {
     private Ngoy<AppComponent> ngoy;
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() {
         createApp();
     }
 
